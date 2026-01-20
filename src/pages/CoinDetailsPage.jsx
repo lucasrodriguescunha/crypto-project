@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { fetchChartData, fetchCoinData } from '../api/coinGecko';
 import { formatMarketCap, formatPrice } from '../utils/formatPrice';
+import { Footer } from '../components/Footer';
 import {
   CartesianGrid,
   LineChart,
@@ -246,11 +247,7 @@ export const CoinDetailsPage = () => {
         </div>
       </section>
 
-      <footer className='footer'>
-        <p>
-          Dados fornecidos pela API do CoinGecko.
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 };

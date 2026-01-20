@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { fetchCryptos } from '../api/coinGecko';
 import { CryptoCard } from '../components/CryptoCard';
+import { Footer } from '../components/Footer';
 import { useFilteredCryptos } from '../hooks/useFilteredCryptos';
 import { useSortedCryptos } from '../hooks/useSortedCryptos';
 import { Rocket, Grid2x2, List } from 'lucide-react';
@@ -71,14 +72,14 @@ export const HomePage = () => {
             className={viewMode === 'grid' ? 'active' : ''}
             onClick={() => setViewMode('grid')}
           >
-            Grade <Grid2x2 />
+            <Grid2x2 />
           </button>
 
           <button
             className={viewMode === 'list' ? 'active' : ''}
             onClick={() => setViewMode('list')}
           >
-            Lista <List />
+            <List />
           </button>
         </div>
       </div>
@@ -99,11 +100,7 @@ export const HomePage = () => {
         </section>
       )}
 
-      <footer className='footer'>
-        <p>
-          Dados fornecidos pela API do CoinGecko.
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 };
