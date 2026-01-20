@@ -31,7 +31,7 @@ export const HomePage = () => {
           <div className='logo-section'>
             <h1>
               <Rocket size={40} color='#add8e6' />{' '}
-              Rastreador de Criptomoedas
+              Monitoramento de Criptomoedas
             </h1>
             <p>Preços e dados de mercado de criptomoedas em tempo real</p>{' '}
           </div>

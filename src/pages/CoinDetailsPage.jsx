@@ -94,7 +94,7 @@ export const CoinDetailsPage = () => {
         <div className='header-content'>
           <div className='logo-section'>
             <h1>
-              <Rocket size={40} color='#add8e6' /> Rastreador de Criptomoedas
+              <Rocket size={40} color='#add8e6' /> Monitoramento de Criptomoedas
             </h1>
             <p>Preços e dados de mercado de criptomoedas em tempo real</p>
           </div>
@@ -233,14 +233,14 @@ export const CoinDetailsPage = () => {
           <div className='stat-card'>
             <span className='stat-label'>Suprimento circulante</span>
             <span className='stat-value'>
-              {coin.market_data.circulating_supply?.toLocaleString() || "N/A"}
+              {coin.market_data.circulating_supply?.toLocaleString() || 'N/A'}
             </span>
           </div>
 
           <div className='stat-card'>
             <span className='stat-label'>Suprimento total</span>
             <span className='stat-value'>
-              {coin.market_data.total_supply?.toLocaleString() || "N/A"}
+              {coin.market_data.total_supply?.toLocaleString() || 'N/A'}
             </span>
           </div>
         </div>
