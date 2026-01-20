@@ -50,6 +50,9 @@ body {
 }
 
 .logo-section h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 2.5rem;
   background: #add8e6;
   -webkit-background-clip: text;
@@ -135,6 +138,11 @@ body {
   outline: none;
   border-color: #add8e6;
   box-shadow: 0 0 0 3px rgba(173, 216, 230, 0.2);
+}
+
+.filter-group select option {
+  background-color: #010203;
+  color: #ffffff;
 }
 
 .view-toggle {
@@ -577,7 +585,11 @@ body {
   }
 
   .logo-section h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+  }
+
+  .logo-section h1 svg {
+    display: none;
   }
 
   .controls {
