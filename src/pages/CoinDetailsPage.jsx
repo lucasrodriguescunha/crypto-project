@@ -104,8 +104,9 @@ export const CoinDetailsPage = () => {
             onClick={() => navigate('/')}
             className='back-button'
           >
-            <MoveLeft /> Voltar à lista
+            Voltar à lista
           </button>
+          <MoveLeft />
         </div>
       </header>
 
