@@ -3,6 +3,7 @@ import { fetchCryptos } from '../api/coinGecko';
 import { CryptoCard } from '../components/CryptoCard';
 import { useFilteredCryptos } from '../hooks/useFilteredCryptos';
 import { useSortedCryptos } from '../hooks/useSortedCryptos';
+import { Rocket, Grid2x2, List } from 'lucide-react';
 
 export const HomePage = () => {
   const [cryptoList, setCryptoList] = useState([]);
@@ -28,10 +29,14 @@ export const HomePage = () => {
       <header className='header'>
         <div className='header-content'>
           <div className='logo-section'>
-            <h1>🚀 Rastreador de Criptomoedas</h1>
-            <p>Preços e dados de mercado de criptomoedas em tempo real</p>
+            <h1>
+              <Rocket size={40} color='#add8e6' />{' '}
+              Rastreador de Criptomoedas
+            </h1>
+            <p>Preços e dados de mercado de criptomoedas em tempo real</p>{' '}
           </div>
-          <div className='search-section'>
+
+          <form className='search-section' role='search'>
             <input
               type='text'
               placeholder='Buscar criptomoedas'
@@ -39,41 +44,41 @@ export const HomePage = () => {
               onChange={(event) => setSearchQuery(event.target.value)}
               value={searchQuery}
             />
-          </div>
+          </form>
         </div>
       </header>
 
-      <div className='controls'>
-        <div className='filter-group'>
+      <div className='controls' aria-label='Controles de visualização'>
+        <form className='filter-group'>
           <label>Ordenar por:</label>
           <select
             value={sortBy}
             onChange={(event) => setSortBy(event.target.value)}
           >
-            <option value='market_cap_rank'>Classificação</option>
+            <option value='market_cap_rank'>Ranking</option>
             <option value='name'>Nome</option>
             <option value='price'>Preço (do mais baixo ao mais alto)</option>
             <option value='price_desc'>
               Preço (do mais alto para o mais baixo)
             </option>
-            <option value='change'>Alteração em 24 horas</option>
+            <option value='change'>Variação em 24 horas</option>
             <option value='market_cap'>Capitalização de mercado</option>
           </select>
-        </div>
+        </form>
 
         <div className='view-toggle'>
           <button
             className={viewMode === 'grid' ? 'active' : ''}
             onClick={() => setViewMode('grid')}
           >
-            Grade
+            Grade <Grid2x2 />
           </button>
 
           <button
             className={viewMode === 'list' ? 'active' : ''}
             onClick={() => setViewMode('list')}
           >
-            Lista
+            Lista <List />
           </button>
         </div>
       </div>
@@ -96,8 +101,7 @@ export const HomePage = () => {
 
       <footer className='footer'>
         <p>
-          Dados fornecidos pela API do CoinGecko • Atualizados a cada 30
-          segundos.
+          Dados fornecidos pela API do CoinGecko.
         </p>
       </footer>
     </main>
