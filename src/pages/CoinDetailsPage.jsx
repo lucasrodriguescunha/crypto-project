@@ -95,7 +95,7 @@ export const CoinDetailsPage = () => {
         <div className='header-content'>
           <div className='logo-section'>
             <h1>
-              <Rocket size={40} color='#add8e6' /> Monitoramento de Criptomoedas
+              Visão Crypto
             </h1>
             <p>Preços e dados de mercado de criptomoedas em tempo real</p>
           </div>

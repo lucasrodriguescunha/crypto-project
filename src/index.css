@@ -587,8 +587,15 @@ body {
     max-width: 100%;
   }
 
+  .logo-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .logo-section h1 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .logo-section h1 svg {
@@ -611,6 +618,10 @@ body {
 
   .view-toggle {
     justify-content: center;
+  }
+
+  .view-toggle button {
+    display: none;
   }
 
   .crypto-container.grid {
