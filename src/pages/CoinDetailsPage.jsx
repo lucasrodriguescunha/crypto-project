@@ -12,7 +12,7 @@ import {
   Line,
   Tooltip
 } from 'recharts';
-import { Rocket, MoveLeft, ArrowUp, ArrowDown } from 'lucide-react';
+import { MoveLeft, ArrowUp, ArrowDown, ArrowRight } from 'lucide-react';
 
 export const CoinDetailsPage = () => {
   const { id } = useParams();
@@ -81,6 +81,7 @@ export const CoinDetailsPage = () => {
           >
             Voltar
           </button>
+          <ArrowRight />
         </section>
       </div>
     );
