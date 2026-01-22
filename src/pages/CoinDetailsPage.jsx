@@ -79,9 +79,8 @@ export const CoinDetailsPage = () => {
             onClick={() => navigate('/')}
             className='back-button'
           >
-            Voltar
+            &#8592; Voltar
           </button>
-          <ArrowRight />
         </section>
       </div>
     );
@@ -105,9 +104,8 @@ export const CoinDetailsPage = () => {
             onClick={() => navigate('/')}
             className='back-button'
           >
-            Voltar à lista
+            &#8592; Voltar à lista
           </button>
-          <MoveLeft />
         </div>
       </header>
 
